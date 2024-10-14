@@ -2,13 +2,12 @@
 
 echo Iniciando o processo de Descarga e Carga de Bancos
 
-echo Executando DescargaBancos.bat...
-call "C:\scripts\DescargaBancos.bat"
+set "current_dir=%~dp0"
 
-echo Aguardando 5 segundos antes de iniciar a Carga...
-timeout /t 5 /nobreak
+echo Executando DescargaBancos.bat...
+call "%current_dir%DescargaBancos.bat"
 
 echo Executando CargaBancos.bat...
-call "C:\scripts\CargaBancos.bat"
+call "%current_dir%CargaBancos.bat"
 
 echo Processo de Descarga e Carga de Bancos concluído.
