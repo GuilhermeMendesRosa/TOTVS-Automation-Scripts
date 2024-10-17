@@ -30,3 +30,7 @@ call proserve "C:\totvs\Datasul\Bancos\eai" -B 1000 -L 200000 -Mm 4096 -N tcp -S
 call proserve "C:\totvs\Datasul\Bancos\eai2" -B 1000 -L 200000 -Mm 4096 -N tcp -S 20022 -n 140 -Ma 15 -Mn 9
 call proserve "C:\totvs\Datasul\Bancos\totvsgen" -B 1000 -L 200000 -Mm 4096 -N tcp -S 20023 -n 140 -Ma 15 -Mn 9
 call proserve "C:\totvs\Datasul\Bancos\neogrid" -B 1000 -L 200000 -Mm 4096 -N tcp -S 20024 -n 140 -Ma 15 -Mn 9
+
+rem # Conexões SQL
+
+call proserve "C:\totvs\Datasul\Bancos\emsfnd" -ServerType SQL -m3 -S 19001 -Ma 10 -Mpb 4
